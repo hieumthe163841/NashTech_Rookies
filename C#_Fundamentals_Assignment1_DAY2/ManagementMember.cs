@@ -29,7 +29,7 @@
                 Console.WriteLine($"{member}");
             }
         }
-        public void Get3List()
+        public void ManageMemberBirthYearQueries()
         {
             while (true)
             {
@@ -40,14 +40,7 @@
                 Console.WriteLine("     0. Exit to Menu ");
                 Console.WriteLine("Enter your choice:");
                 string choiceInput = Console.ReadLine();
-                int choice;
-                if (!int.TryParse(choiceInput, out choice))
-                {
-                    Console.WriteLine("Invalid input. Please enter a number");
-                    continue;
-                }
-                else
-                {
+                int choice = ValidationInput.CheckInputInt(choiceInput);
                     switch (choice)
                     {
                         case 1:
@@ -65,42 +58,66 @@
                             Console.WriteLine("Please choice number of range from 0 to 3");
                             break;
                     }
-                }
+                
             }
            
         }
         public void GetMembersBornInAYear()
         {
             Console.WriteLine("Enter your years:");
-            int year = Convert.ToInt32(Console.ReadLine());
+            int year = ValidationInput.CheckInputInt(Console.ReadLine());
             Console.WriteLine($"Members born in {year}: ");
             var membersInYear = members.Where(member => member.DateOfBirth.Year == year);
-            foreach (var member in membersInYear)
+            if(membersInYear.Count() == 0)
             {
-                Console.WriteLine($"{member.ToString()}");
+                Console.WriteLine("No member was born in this year");
             }
+            else
+            {
+                foreach (var member in membersInYear)
+                {
+                    Console.WriteLine($"{member.ToString()}");
+                }
+            }
+            
         }
         public void GetMembersAfterAYear()
         {
             Console.WriteLine("Enter your years:");
-            int year = Convert.ToInt32(Console.ReadLine());
+            int year = ValidationInput.CheckInputInt(Console.ReadLine());
             Console.WriteLine($"Members born after {year}: ");
             var memberAfterYear = members.Where(member => member.DateOfBirth.Year > year);
-            foreach (var member in memberAfterYear)
+            if(memberAfterYear.Count() == 0)
             {
-                Console.WriteLine($"{member.ToString()}");
+                Console.WriteLine("No member was born after this year");
             }
+            else
+            {
+                foreach (var member in memberAfterYear)
+                {
+                    Console.WriteLine($"{member.ToString()}");
+                }
+            }
+            
         }
         public void GetMembersBornBeforeAYear()
         {
             Console.WriteLine("Enter your years:");
-            int year = Convert.ToInt32(Console.ReadLine());
+            int year = ValidationInput.CheckInputInt(Console.ReadLine());
             Console.WriteLine($"Members born before {year}: ");
             var memberBeforeYear = members.Where(member => member.DateOfBirth.Year < year);
-            foreach (var member in memberBeforeYear)
+            if(memberBeforeYear.Count() == 0)
             {
-                Console.WriteLine($"{member.ToString()}");
+                Console.WriteLine("No member was born before this year");
             }
+            else
+            {
+                foreach (var member in memberBeforeYear)
+                {
+                    Console.WriteLine($"{member.ToString()}");
+                }
+            }
+            
         }
         public void GetFirstPersonBornInHaNoi()
         {
