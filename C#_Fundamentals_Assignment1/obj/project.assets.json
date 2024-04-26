@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DEV\\Nashtech\\Tranning\\C# Fundamentals\\C#_Fundamentals\\C#_Fundamentals_Assignment1\\C#_Fundamentals_Assignment1_DAY1.csproj",
+      "projectUniqueName": "D:\\DEV\\Nashtech\\Tranning\\Rookies\\NashTech_Rookies\\C#_Fundamentals_Assignment1\\C#_Fundamentals_Assignment1_DAY1.csproj",
       "projectName": "C#_Fundamentals_Assignment1_DAY1",
-      "projectPath": "D:\\DEV\\Nashtech\\Tranning\\C# Fundamentals\\C#_Fundamentals\\C#_Fundamentals_Assignment1\\C#_Fundamentals_Assignment1_DAY1.csproj",
+      "projectPath": "D:\\DEV\\Nashtech\\Tranning\\Rookies\\NashTech_Rookies\\C#_Fundamentals_Assignment1\\C#_Fundamentals_Assignment1_DAY1.csproj",
       "packagesPath": "C:\\Users\\hieum\\.nuget\\packages\\",
-      "outputPath": "D:\\DEV\\Nashtech\\Tranning\\C# Fundamentals\\C#_Fundamentals\\C#_Fundamentals_Assignment1\\obj\\",
+      "outputPath": "D:\\DEV\\Nashtech\\Tranning\\Rookies\\NashTech_Rookies\\C#_Fundamentals_Assignment1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
