@@ -1,29 +1,29 @@
-﻿namespace C__Fundamentals_Assignment1_PrimeNumber_DAY2
+﻿namespace C__Fundamentals_Assignment2_PrimeNumber
 {
     public class PrimeNumber
     {
-       
-
-        public static bool IsPrime(int number)
+        public static async Task<bool> IsPrimeAsync(int number)
         {
-            if (number == 1)
+            if (number <= 1)
+            {
+                return false;
+            }
+            if(number == 2)
+            {
+                return true;
+            }
+            if (number % 2 == 0)
             {
                 return false;
             }
 
-            if (number == 2)
-            {
-                return true;
-            }
-
-            for (int i = 2; i <= number / 2; i++)
+            for (int i = 3; i <= Math.Sqrt(number); i += 2)
             {
                 if (number % i == 0)
                 {
                     return false;
                 }
             }
-
             return true;
         }
     }

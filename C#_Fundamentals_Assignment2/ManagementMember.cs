@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1_DAY2
+﻿namespace C__Fundamentals_Assignment2
 {
     public class ManagementMember
     {
@@ -6,11 +6,19 @@
         public void GetMaleStudents()
         {
             Console.WriteLine("Male Members: ");
-            var maleMembers = members.Where(member => member.Gender == "Male");
-            foreach (var member in maleMembers)
+            var maleMembers = members.Where(member => member.Gender == "Male").ToList();
+            if(maleMembers.Count() != 0)
             {
-                Console.WriteLine($"{member.ToString()}");
+                foreach (var member in maleMembers)
+                {
+                    Console.WriteLine($"{member.ToString()}");
+                }
             }
+            else
+            {
+                Console.WriteLine("No male member in list");
+            }
+            
            
         }
         public void GetOldMember()
@@ -18,15 +26,30 @@
             Console.WriteLine("Oldest Member: ");
             Member oldestMember = null;
             oldestMember = members.OrderBy(member => member.DateOfBirth).FirstOrDefault();
-            Console.WriteLine($"{oldestMember.ToString()}");
+            if(oldestMember == null )
+            {
+                Console.WriteLine("No member in list");
+            }
+            else
+            {
+                Console.WriteLine($"{oldestMember.ToString()}");
+            }
+            
         }
         public void GetFullNameList()
         {
-            Console.WriteLine("\nFull Name List: ");
+            Console.WriteLine("Full Name List: ");
             var fullNameList = members.Select(member => $"{member.FirstName} {member.LastName}");
-            foreach (var member in fullNameList)
+            if(fullNameList != null && fullNameList.Any())
             {
-                Console.WriteLine($"{member}");
+                foreach (var member in fullNameList)
+                {
+                    Console.WriteLine($"{member}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No member in list");
             }
         }
         public void ManageMemberBirthYearQueries()

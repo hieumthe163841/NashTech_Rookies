@@ -1,4 +1,4 @@
-﻿using C__Fundamentals_Assignment1_DAY1;
+﻿using C__Fundamentals_Assignment1;
 
 public class Program
 {

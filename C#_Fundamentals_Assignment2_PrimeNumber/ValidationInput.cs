@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1_PrimeNumber_DAY2
+﻿namespace C__Fundamentals_Assignment2_PrimeNumber
 {
     public class ValidationInput
     {
@@ -7,7 +7,7 @@
             Console.WriteLine(message);
             while (true)
             {
-                if(int.TryParse(Console.ReadLine(), out int input) && input > 0)
+                if(int.TryParse(Console.ReadLine(), out int input) && input >= 0)
                 {
                     return input;
                 }

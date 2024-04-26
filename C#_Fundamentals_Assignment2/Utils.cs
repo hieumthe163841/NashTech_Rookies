@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1
+﻿namespace C__Fundamentals_Assignment2
 {
     public class Utils
     {

@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1_DAY2
+﻿namespace C__Fundamentals_Assignment2
 {
     public class ManagementMenu 
     {
@@ -18,19 +18,11 @@
                 Console.WriteLine("0. Exit");
                 Console.WriteLine("Enter your choice");
 
-                string choiceInput = Console.ReadLine();
-                //if (!int.TryParse(choiceInput, out choice))
-                //{
-                //    Console.WriteLine("Invalid. Please enter a number");
-                //    continue;
-                //}
-                //else
-                //{
+                string choiceInput = Console.ReadLine();               
                 choice = ValidationInput.CheckInputInt(choiceInput);
                     switch (choice)
                     {
                         case 1:
-
                             managementMember.GetMaleStudents();
                             break;
                         case 2:
@@ -55,7 +47,6 @@
                             Console.WriteLine("Please choice number of range from 0 to 6");
                             break;
                     }
-                //}
             }
         }
     }

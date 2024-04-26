@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1_DAY2
+﻿namespace C__Fundamentals_Assignment2
 {
     public class Member
     {
