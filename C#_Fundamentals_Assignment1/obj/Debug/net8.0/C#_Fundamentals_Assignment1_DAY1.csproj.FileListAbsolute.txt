@@ -12,3 +12,18 @@ D:\DEV\Nashtech\Tranning\C# Fundamentals\C#_Fundamentals_Assignment1\C#_Fundamen
 D:\DEV\Nashtech\Tranning\C# Fundamentals\C#_Fundamentals_Assignment1\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.pdb
 D:\DEV\Nashtech\Tranning\C# Fundamentals\C#_Fundamentals_Assignment1\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.genruntimeconfig.cache
 D:\DEV\Nashtech\Tranning\C# Fundamentals\C#_Fundamentals_Assignment1\C#_Fundamentals_Assignment1\obj\Debug\net8.0\ref\C#_Fundamentals_Assignment1_DAY1.dll
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\bin\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.exe
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\bin\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.deps.json
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\bin\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.runtimeconfig.json
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\bin\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.dll
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\bin\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.pdb
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.AssemblyInfoInputs.cache
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.AssemblyInfo.cs
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.csproj.CoreCompileInputs.cache
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.sourcelink.json
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.dll
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\refint\C#_Fundamentals_Assignment1_DAY1.dll
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.pdb
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\C#_Fundamentals_Assignment1_DAY1.genruntimeconfig.cache
+D:\DEV\Nashtech\Tranning\Rookies\NashTech_Rookies\C#_Fundamentals_Assignment1\obj\Debug\net8.0\ref\C#_Fundamentals_Assignment1_DAY1.dll

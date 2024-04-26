@@ -1,4 +1,4 @@
-﻿namespace C__Fundamentals_Assignment1_DAY1
+﻿namespace C__Fundamentals_Assignment1_DAY2
 {
     public class Member
     {
@@ -12,6 +12,9 @@
         public int Age => DateTime.Now.Year - DateOfBirth.Year;
         public string FullName => FirstName + " " + LastName;
 
-
+        public override string ToString()
+        {
+            return $"{FullName} | {Gender} | {DateOfBirth} | {PhoneNumber} | {BirthPlace} | {IsGraduated} | {Age}";
+        }
     }
 }

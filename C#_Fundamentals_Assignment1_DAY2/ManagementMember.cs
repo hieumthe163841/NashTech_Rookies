@@ -1,38 +1,32 @@
-﻿namespace C__Fundamentals_Assignment1_DAY1
+﻿namespace C__Fundamentals_Assignment1_DAY2
 {
     public class ManagementMember
     {
         List<Member> members = GetMembers();
         public void GetMaleStudents()
         {
-            Console.WriteLine("\nMale Members: ");
-            foreach (var member in members)
+            Console.WriteLine("Male Members: ");
+            var maleMembers = members.Where(member => member.Gender == "Male");
+            foreach (var member in maleMembers)
             {
-                if (member.Gender == "Male")
-                {
-                    Console.WriteLine($"{member.FullName}");
-                }
+                Console.WriteLine($"{member.ToString()}");
             }
+           
         }
         public void GetOldMember()
         {
-            Console.WriteLine("\nOldest Member: ");
+            Console.WriteLine("Oldest Member: ");
             Member oldestMember = null;
-            foreach (var member in members)
-            {
-                if (oldestMember == null || member.DateOfBirth < oldestMember.DateOfBirth)
-                {
-                    oldestMember = member;
-                }
-            }
-            Console.WriteLine($"{oldestMember.FullName} - Age: {oldestMember.Age}");
+            oldestMember = members.OrderBy(member => member.DateOfBirth).FirstOrDefault();
+            Console.WriteLine($"{oldestMember.ToString()}");
         }
         public void GetFullNameList()
         {
             Console.WriteLine("\nFull Name List: ");
-            foreach (var member in members)
+            var fullNameList = members.Select(member => $"{member.FirstName} {member.LastName}");
+            foreach (var member in fullNameList)
             {
-                Console.WriteLine($"{member.FirstName} {member.LastName}");
+                Console.WriteLine($"{member}");
             }
         }
         public void Get3List()
@@ -67,6 +61,9 @@
                             break;
                         case 0:
                             return;
+                        default:
+                            Console.WriteLine("Please choice number of range from 0 to 3");
+                            break;
                     }
                 }
             }
@@ -76,59 +73,50 @@
         {
             Console.WriteLine("Enter your years:");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"\nMembers born in {year}: ");
-            foreach (var member in members)
+            Console.WriteLine($"Members born in {year}: ");
+            var membersInYear = members.Where(member => member.DateOfBirth.Year == year);
+            foreach (var member in membersInYear)
             {
-                if (member.DateOfBirth.Year == year)
-                {
-                    Console.WriteLine($"{member.FullName} - BirthDate: {member.DateOfBirth.Year}");
-                }
+                Console.WriteLine($"{member.ToString()}");
             }
         }
         public void GetMembersAfterAYear()
         {
             Console.WriteLine("Enter your years:");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"\nMembers born after {year}: ");
-            foreach (var member in members)
+            Console.WriteLine($"Members born after {year}: ");
+            var memberAfterYear = members.Where(member => member.DateOfBirth.Year > year);
+            foreach (var member in memberAfterYear)
             {
-                if (member.DateOfBirth.Year > year)
-                {
-                    Console.WriteLine($"{member.FullName} - BirthDate: {member.DateOfBirth.Year} ");
-                }
+                Console.WriteLine($"{member.ToString()}");
             }
         }
         public void GetMembersBornBeforeAYear()
         {
             Console.WriteLine("Enter your years:");
             int year = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"\nMembers born before {year}: ");
-            foreach (var member in members)
+            Console.WriteLine($"Members born before {year}: ");
+            var memberBeforeYear = members.Where(member => member.DateOfBirth.Year < year);
+            foreach (var member in memberBeforeYear)
             {
-                if (member.DateOfBirth.Year < year)
-                {
-                    Console.WriteLine($"{member.FullName} BirthDate: {member.DateOfBirth.Year}");
-                }
+                Console.WriteLine($"{member.ToString()}");
             }
         }
         public void GetFirstPersonBornInHaNoi()
         {
-            Console.WriteLine("\nFirst person who was born in Ha Noi: ");
+            Console.WriteLine("First person who was born in Ha Noi: ");
 
-            while (true)
+            var firstPersonInHaNoi = members.FirstOrDefault(members => members.BirthPlace == "Ha Noi");
+            if(firstPersonInHaNoi != null)
             {
-                foreach (var member in members)
-                {
-                    if (member.BirthPlace == "Ha Noi")
-                    {
-                        Console.WriteLine($"{member.FullName} - born in {member.BirthPlace}");
-                        break;
-                    }
-
-                }
-                break;
+                Console.WriteLine($"{firstPersonInHaNoi.ToString()}");
+            }
+            else
+            {
+                Console.WriteLine("No person was born in Ha Noi");
             }
         }
+       
         public static List<Member> GetMembers()
         {
             return new List<Member>()
