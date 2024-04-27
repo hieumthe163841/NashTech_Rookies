@@ -2,12 +2,7 @@
 {
     public class PrimeNumberFinder
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
-        /// <returns></returns>
+   
         public static async Task<List<int>> FindPrimesInRangeAsync(int start, int end)
         {
             return await Task.Run(async () =>
@@ -18,6 +13,7 @@
                     if (await PrimeNumber.IsPrimeAsync(i))
                     {
                         primes.Add(i);
+                        Thread.Sleep(100);
                     }
 
                 }

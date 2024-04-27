@@ -6,22 +6,36 @@ class Program
     {
         int startRange = ValidationInput.IsValidInput("Enter startRange: ");
         int endRange = ValidationInput.IsValidInput("Enter endRange: ");
-        while(startRange >= endRange)
+        while (startRange >= endRange)
         {
             Console.WriteLine("Invalid input. Start range must be less than end range.");
             startRange = ValidationInput.IsValidInput("Enter startRange: ");
             endRange = ValidationInput.IsValidInput("Enter endRange: ");
         }
-        
-       
-            List<int> primeNumbers = await PrimeNumberFinder.FindPrimesInRangeAsync(startRange, endRange);
-            Console.WriteLine($"Prime numbers between {startRange} and {endRange} are:");
-            foreach (int prime in primeNumbers)
+
+        List<Task<List<int>>> tasks = new List<Task<List<int>>>();
+        int partitionSize = 10;
+        for(int i = startRange; i <= endRange; i += partitionSize)
+        {
+            int start = i;
+            int end = i + partitionSize - 1;
+            if(end > endRange)
             {
-                Console.Write($"{prime} ");
+                end = endRange;
             }
-   
-        Console.ReadKey();
+            tasks.Add(PrimeNumberFinder.FindPrimesInRangeAsync(start, end));
+        }
+
+        await Task.WhenAll(tasks);
+
+        List<int> primeNumbers = tasks.SelectMany(t => t.Result).ToList();
+
+        Console.WriteLine($"Prime numbers between {startRange} and {endRange} are:");
+        foreach (int prime in primeNumbers)
+        {
+            Console.Write($"{prime} ");
+        }
+        Console.ReadLine();
 
 
     }
