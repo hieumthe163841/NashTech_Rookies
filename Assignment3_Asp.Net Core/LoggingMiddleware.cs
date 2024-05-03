@@ -1,4 +1,5 @@
 ﻿using Serilog;
+using Serilog.Context;
 using System.Text;
 
 namespace Assignment3_Asp.Net_Core
@@ -17,6 +18,7 @@ namespace Assignment3_Asp.Net_Core
             string requestData = await GetRequestDataAsync(httpContext);
 
             Log.Information(requestData.ToString());
+            //Log.Information("Request received");
 
             await _next(httpContext);
         }
@@ -30,6 +32,12 @@ namespace Assignment3_Asp.Net_Core
             requestData.AppendLine($"Host: {httpContext.Request.Host}");
             requestData.AppendLine($"Path: {httpContext.Request.Path}");
             requestData.AppendLine($"QueryString: {httpContext.Request.QueryString}");
+            //using(LogContext.PushProperty("Schema ", httpContext.Request.Scheme));
+            //using (LogContext.PushProperty("Host", httpContext.Request.Host));
+            //using (LogContext.PushProperty("Path", httpContext.Request.Path));
+            //using (LogContext.PushProperty("QueryString", httpContext.Request.QueryString));
+
+
 
             httpContext.Request.EnableBuffering();
 
@@ -53,6 +61,7 @@ namespace Assignment3_Asp.Net_Core
             httpContext.Request.Body.Position = 0;
 
             requestData.AppendLine($"RequestBody: {requestBody}");
+            //LogContext.PushProperty("RequestBody", requestBody);
 
 
             return requestData.ToString();

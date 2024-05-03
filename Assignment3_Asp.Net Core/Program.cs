@@ -12,16 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 //    .WriteTo.File("logs/log.txt",
 //    rollingInterval: RollingInterval.Minute)
 //    .CreateLogger();
-builder.Host.UseSerilog((hostingContext, loggerConfiguatrion) =>
+// Khởi tạo và cấu hình Serilog
+
+
+builder.Host.UseSerilog((context,config) =>
 {
-    loggerConfiguatrion.
-    ReadFrom.Configuration(hostingContext.Configuration)
-    .Enrich.FromLogContext();
+    config.ReadFrom.Configuration(context.Configuration);
 });
-
-//builder.Host.UseSerilog();
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddHttpContextAccessor(); 
 var app = builder.Build();
 
 // Cấu hình request pipeline
