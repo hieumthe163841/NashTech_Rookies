@@ -48,9 +48,7 @@ namespace Assignment3_Asp.Net_Core
             }
 
             httpContext.Request.Body.Position = 0;
-
             requestData.AppendLine($"RequestBody: {requestBody}");
-
 
             return requestData.ToString();
         }

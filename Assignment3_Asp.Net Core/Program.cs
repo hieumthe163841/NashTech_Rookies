@@ -3,18 +3,6 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Cấu hình Serilog
-//builder.Host.UseSerilog((ctx, lc) => lc
-//    .WriteTo.File("log/request-.txt",shared: true, rollingInterval: RollingInterval.Day)
-//    .ReadFrom.Configuration(ctx.Configuration));
-
-//Log.Logger = new LoggerConfiguration()
-//    .WriteTo.File("logs/log.txt",
-//    rollingInterval: RollingInterval.Minute)
-//    .CreateLogger();
-// Khởi tạo và cấu hình Serilog
-
-
 builder.Host.UseSerilog((context,config) =>
 {
     config.ReadFrom.Configuration(context.Configuration);
@@ -23,7 +11,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor(); 
 var app = builder.Build();
 
-// Cấu hình request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
